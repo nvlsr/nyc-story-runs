@@ -10,7 +10,7 @@
 		525EF2EE1CCB473000373B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525EF2EC1CCB473000373B01 /* Main.storyboard */; };
 		525EF2F31CCB473000373B01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525EF2F11CCB473000373B01 /* LaunchScreen.storyboard */; };
 		764DA2E41E539E67003DD1A5 /* StopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 764DA2E31E539E67003DD1A5 /* StopButton.png */; };
-		767B582A1E4D286F00813177 /* Ladies’ Pavilion- Téa Leoni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 767B58291E4D286F00813177 /* Ladies’ Pavilion- Téa Leoni.mp3 */; };
+		7654A2A41E53B0240046FBE5 /* Ladies’ Pavilion- Téa Leoni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7654A2A31E53B0240046FBE5 /* Ladies’ Pavilion- Téa Leoni.mp3 */; };
 		7694A8C51E4D21900048417B /* Belvedere Castle- Lee Goldberg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7694A8BA1E4D21900048417B /* Belvedere Castle- Lee Goldberg.mp3 */; };
 		7694A8C61E4D21900048417B /* Harlem Meer- S. Epatha Merkerson.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7694A8BB1E4D21900048417B /* Harlem Meer- S. Epatha Merkerson.mp3 */; };
 		7694A8C81E4D21900048417B /* Loeb Boathouse- Meredith Vieira.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7694A8BD1E4D21900048417B /* Loeb Boathouse- Meredith Vieira.mp3 */; };
@@ -34,7 +34,7 @@
 		525EF2ED1CCB473000373B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		525EF2F21CCB473000373B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		764DA2E31E539E67003DD1A5 /* StopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StopButton.png; sourceTree = "<group>"; };
-		767B58291E4D286F00813177 /* Ladies’ Pavilion- Téa Leoni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Ladies’ Pavilion- Téa Leoni.mp3"; path = "Audio/Ladies’ Pavilion- Téa Leoni.mp3"; sourceTree = "<group>"; };
+		7654A2A31E53B0240046FBE5 /* Ladies’ Pavilion- Téa Leoni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ladies’ Pavilion- Téa Leoni.mp3"; sourceTree = "<group>"; };
 		7694A8BA1E4D21900048417B /* Belvedere Castle- Lee Goldberg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Belvedere Castle- Lee Goldberg.mp3"; path = "NYCStoryRuns/Audio/Belvedere Castle- Lee Goldberg.mp3"; sourceTree = SOURCE_ROOT; };
 		7694A8BB1E4D21900048417B /* Harlem Meer- S. Epatha Merkerson.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Harlem Meer- S. Epatha Merkerson.mp3"; path = "NYCStoryRuns/Audio/Harlem Meer- S. Epatha Merkerson.mp3"; sourceTree = SOURCE_ROOT; };
 		7694A8BD1E4D21900048417B /* Loeb Boathouse- Meredith Vieira.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Loeb Boathouse- Meredith Vieira.mp3"; path = "NYCStoryRuns/Audio/Loeb Boathouse- Meredith Vieira.mp3"; sourceTree = SOURCE_ROOT; };
@@ -110,9 +110,9 @@
 		769F58B11E439FBB00B42099 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				7654A2A31E53B0240046FBE5 /* Ladies’ Pavilion- Téa Leoni.mp3 */,
 				7694A8BA1E4D21900048417B /* Belvedere Castle- Lee Goldberg.mp3 */,
 				7694A8BB1E4D21900048417B /* Harlem Meer- S. Epatha Merkerson.mp3 */,
-				767B58291E4D286F00813177 /* Ladies’ Pavilion- Téa Leoni.mp3 */,
 				7694A8BD1E4D21900048417B /* Loeb Boathouse- Meredith Vieira.mp3 */,
 				7694A8BE1E4D21900048417B /* Obelisk- Thomas P. Campbell.mp3 */,
 				7694A8BF1E4D21900048417B /* Shakespeare Garden- Marcia Gay Harden.mp3 */,
@@ -194,7 +194,7 @@
 				7694A8CE1E4D21900048417B /* Work- Oppo Direction.mp3 in Resources */,
 				7694A8CF1E4D21900048417B /* Work-Subway Station.mp3 in Resources */,
 				764DA2E41E539E67003DD1A5 /* StopButton.png in Resources */,
-				767B582A1E4D286F00813177 /* Ladies’ Pavilion- Téa Leoni.mp3 in Resources */,
+				7654A2A41E53B0240046FBE5 /* Ladies’ Pavilion- Téa Leoni.mp3 in Resources */,
 				7694A8CC1E4D21900048417B /* The Pond- Sarah Jessica Parker.mp3 in Resources */,
 				525EF2F31CCB473000373B01 /* LaunchScreen.storyboard in Resources */,
 				7694A8DD1E4D21D30048417B /* Assets.xcassets in Resources */,
