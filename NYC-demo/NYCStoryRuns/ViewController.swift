@@ -15,6 +15,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var mAudioSession : AVAudioSession?
     var mDebugFile : FileHandle?
     
+    var mStopButton: UIButton?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,19 +37,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
         catch{}
         
-        let mybutton = UIButton(type: UIButtonType.system) as UIButton
-        mybutton.frame = CGRect(x: 10, y: 600, width: 350, height: 80)
-        mybutton.addTarget(self, action:#selector(handleButton), for: .touchUpInside)
-        mybutton.setTitle("START", for: .normal)
-        self.view.addSubview(mybutton)
+        mStopButton = UIButton(type: UIButtonType.system) as UIButton
+        mStopButton?.frame = CGRect(x: 170, y: 600, width: 48, height: 48)
+        mStopButton?.addTarget(self, action:#selector(handleButton), for: .touchUpInside)
+        self.view.addSubview(mStopButton!)
+        
         
         // setup test data
         setupData()
     }
     
     func handleButton(sender:UIButton!) {
-        print("Button Clicked")
-        showAlert("Starting")
+        mAudioPlayer?.stop()
+        mStopButton?.setImage(nil, for: .normal)
     }
     
     
@@ -165,6 +167,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         do{
             try mAudioSession?.setActive(false)
+            mStopButton?.setImage(nil, for: .normal)
         }
         catch{
         }
@@ -201,6 +204,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     mAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "mp3" )!))
                     mAudioPlayer?.prepareToPlay()
                     mAudioPlayer?.play()
+                    mStopButton?.setImage(#imageLiteral(resourceName: "StopButton.png"), for: .normal)
                 }
             }
             else{
@@ -209,6 +213,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 mAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "mp3" )!))
                 mAudioPlayer?.prepareToPlay()
                 mAudioPlayer?.play()
+                mStopButton?.setImage(#imageLiteral(resourceName: "StopButton.png"), for: .normal)
             }
             
         }catch _ {
