@@ -193,6 +193,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     func geofenceTriggered(_ name: String) {
         print("Triggered " + name)
+        guard let thePath:String = Bundle.main.path(forResource: name, ofType: "mp3") else{
+            print("File does not exist")
+            return
+        }
         
         do{
             let theDebug = "Playing " + name + "\n"
@@ -201,7 +205,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             if( mAudioPlayer != nil){
                 if !((mAudioPlayer?.isPlaying)!) {
                     try mAudioSession?.setActive(true)
-                    mAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "mp3" )!))
+                    mAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: thePath))
                     mAudioPlayer?.prepareToPlay()
                     mAudioPlayer?.play()
                     mStopButton?.setImage(#imageLiteral(resourceName: "StopButton.png"), for: .normal)
@@ -210,7 +214,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             else{
                 mAudioPlayer = AVAudioPlayer()
                 try mAudioSession?.setActive(true)
-                mAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: name, ofType: "mp3" )!))
+                mAudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: thePath))
                 mAudioPlayer?.prepareToPlay()
                 mAudioPlayer?.play()
                 mStopButton?.setImage(#imageLiteral(resourceName: "StopButton.png"), for: .normal)
